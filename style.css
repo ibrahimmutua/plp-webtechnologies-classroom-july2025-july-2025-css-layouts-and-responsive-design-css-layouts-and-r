@@ -1,0 +1,62 @@
+/* Reset some spacing */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header with Flexbox */
+header {
+  background: #333;
+  color: white;
+  padding: 10px;
+  display: flex;              /* Use Flexbox */
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid for articles */
+.grid {
+  display: grid;                 /* Use Grid */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.item {
+  background: lightblue;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #999;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #eee;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;   /* Stack items */
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* One column on small screens */
+  }
+}
